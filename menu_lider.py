@@ -1,1 +1,1 @@
-#este menu contendra toda las opciones del menu
+#este modulo contendra toda las opciones del menu de los lideres
