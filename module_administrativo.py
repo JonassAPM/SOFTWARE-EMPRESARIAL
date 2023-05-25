@@ -2,6 +2,8 @@ from os import system
 import os 
 import getpass
 import limpiar_consola
+import module_reportes
+import random,time
 
 
 def menu_principal():
@@ -52,13 +54,18 @@ def menu_administrativo():
                limpiar_consola.system_clear_function()
                return menu_administrativo()
           if (opcion==1):
-               pass
+               module_reportes.menu_reportes()
           elif (opcion==2):
                pass
           elif (opcion==3):
                pass
           elif (opcion==4):
-               return menu_administrativo()
+               for i in reversed(range(1,2)):
+                    print(f"redirigiendo al sistema de votación...{i}")
+                    time.sleep(1)
+               print(f"Saliendo del sistema...{i}")
+               limpiar_consola.system_clear_function()
+               return menu_principal()
           else:
                print("Ocurrio un error")
                exit()
